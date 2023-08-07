@@ -66,7 +66,6 @@ void lowerBeamBreak_ISR() {
 
     if (!ModbusRTUClient.holdingRegisterWrite(controlBoardAddress, motor1, 0x0100)) {  // 0x0100 relay on
       Serial.print("Large Package Detected. Failed to turn on Motor2 ");
-      Serial.println(i);
       Serial.println(ModbusRTUClient.lastError());
     } else {
       Serial.println("Large Package Detected. Motor1 ON. ");
@@ -79,7 +78,6 @@ void lowerBeamBreak_ISR() {
     // small package detected
     if (!ModbusRTUClient.holdingRegisterWrite(controlBoardAddress, motor2, 0x0100)) {  // 0x0100 relay on
       Serial.print("Small Package Detected. Failed to turn on Motor2. ");
-      Serial.println(i);
       Serial.println(ModbusRTUClient.lastError());
     } else {
       Serial.println("Small Package Detected. Motor2 ON. ");
