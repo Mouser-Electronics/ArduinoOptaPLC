@@ -25,7 +25,6 @@ int motor1 = 1;
 int motor2 = 2;
 int motorTimeOn = 5000;
 
-bool lowerBeamBreak_ISR();
 
 void setup() {
   // Initialize serial and wait for port to open:
